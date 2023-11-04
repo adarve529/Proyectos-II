@@ -16,9 +16,13 @@ public class CambioNivel : MonoBehaviour
     {
         
     }
-
-    public void CambiarNivel(int numeroNivel)
+    public void PlayGame(int esceneNumber)
     {
-        SceneManager.LoadScene(numeroNivel);
+        SceneManager.LoadScene(esceneNumber);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
