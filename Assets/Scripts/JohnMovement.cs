@@ -85,4 +85,12 @@ public class JohnMovement : MonoBehaviour
         Health = Health - 1;
         if(Health == 0) { Destroy(gameObject); }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "FallingCollider")
+        {
+            CambioNivel.PlayGame(4);
+        }
+    }
 }

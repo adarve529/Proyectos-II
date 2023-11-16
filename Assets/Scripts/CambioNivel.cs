@@ -16,7 +16,7 @@ public class CambioNivel : MonoBehaviour
     {
         
     }
-    public void PlayGame(int esceneNumber)
+    public static void PlayGame(int esceneNumber)
     {
         SceneManager.LoadScene(esceneNumber);
     }
