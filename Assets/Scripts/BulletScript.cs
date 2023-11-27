@@ -46,9 +46,11 @@ public class BulletScript : MonoBehaviour
     {
         JohnMovement john = collision.GetComponent<JohnMovement>();
         GruntScript grunt = collision.GetComponent<GruntScript>();
-
+        GruntPortalScript gruntPortal = collision.GetComponent<GruntPortalScript>();
+               
         if (john != null) { john.Hit(); }
         if (grunt != null) { grunt.Hit(); }
+        if (gruntPortal != null) { gruntPortal.Hit(); }
 
         DestroyBullet();
     }

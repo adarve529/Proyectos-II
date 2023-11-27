@@ -10,11 +10,14 @@ public class GruntScript : MonoBehaviour
     public GameObject BulletPrefab;
     public AudioClip DeathSound;
     public AudioClip HitSound;
+    public float Speed;
+    public float DesiredDistance;
 
     private float lastShoot;
     private Animator Animator;  
     private int Health = 3;
     private bool isDeath = false;
+    private Rigidbody2D Rigidbody2D;
 
     [SerializeField] private EventReference shotSound;
     [SerializeField] private EventReference deathSound;
@@ -26,27 +29,48 @@ public class GruntScript : MonoBehaviour
     void Start()
     {
         Animator = GetComponent<Animator>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDeath)
+        {
+            
+            return;
+        }
 
         if (John == null) return;
 
-        Vector3 direction = John.transform.position - transform.position;
-        if (direction.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        Vector3 directionToPlayer = John.transform.position - transform.position;
+        if (directionToPlayer.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 
-        float distance = Mathf.Abs(John.transform.position.x - transform.position.x);
+        float distanceToPlayer = Mathf.Abs(John.transform.position.x - transform.position.x);
 
-        if(distance < 1.0f && Time.time  > lastShoot + 0.5f)
+        if (distanceToPlayer > DesiredDistance)
+        {
+            MoveTowardsPlayer();
+        }
+
+        if (distanceToPlayer < 1.0f && Time.time  > lastShoot + 0.5f)
         {
             Shoot();
             lastShoot = Time.time;
         }
-    }
 
+       
+    }
+    public void MoveTowardsPlayer()
+    {
+        // Obtén la dirección hacia el jugador
+        Vector3 directionToPlayer = (John.transform.position - transform.position).normalized;
+
+        // Mueve al enemigo en la dirección hacia el jugador
+        transform.Translate(directionToPlayer * Speed * Time.deltaTime);
+    }
+    
     private void Shoot()
     {
         Vector3 direction;
