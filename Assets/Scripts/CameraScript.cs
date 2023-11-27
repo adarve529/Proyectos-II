@@ -5,28 +5,30 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public GameObject John;
-    public float cameraFollowSpeed; // Velocidad de seguimiento de la cámara
+    public float cameraFollowSpeed; // Velocidad de seguimiento de la cï¿½mara
     public float verticalMargin; // Margen vertical para activar el seguimiento
+
+
 
     // Update is called once per frame
     void Update()
     {
         if (John != null)
         {
-            // Obtener la posición actual de la cámara
+            // Obtener la posiciï¿½n actual de la cï¿½mara
             Vector3 targetPosition = transform.position;
 
             // Seguir a John en el eje X
             targetPosition.x = John.transform.position.x;
 
-            // Solo sigue al personaje en el eje Y si está cerca del borde vertical
+            // Solo sigue al personaje en el eje Y si estï¿½ cerca del borde vertical
             float verticalDifference = John.transform.position.y - transform.position.y;
             if (Mathf.Abs(verticalDifference) > verticalMargin)
             {
                 targetPosition.y = John.transform.position.y;
             }
 
-            // Interpolar suavemente la posición de la cámara
+            // Interpolar suavemente la posiciï¿½n de la cï¿½mara
             transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * cameraFollowSpeed);
         }
     }

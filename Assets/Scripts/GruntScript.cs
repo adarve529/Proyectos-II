@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -14,6 +15,12 @@ public class GruntScript : MonoBehaviour
     private Animator Animator;  
     private int Health = 3;
     private bool isDeath = false;
+
+    [SerializeField] private EventReference shotSound;
+    [SerializeField] private EventReference deathSound;
+    [SerializeField] private EventReference hitSound;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +55,8 @@ public class GruntScript : MonoBehaviour
 
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<BulletScript>().SetDirection(direction);
+
+        AudioManager.Instance.PlayOneShot(shotSound, this.transform.position);
     }
 
     public void Hit()
@@ -55,12 +64,15 @@ public class GruntScript : MonoBehaviour
         if (!isDeath)
         {
             Health = Health - 1;
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(HitSound);
+            AudioManager.Instance.PlayOneHit(hitSound, this.transform.position);
+            //Camera.main.GetComponent<AudioSource>().PlayOneShot(HitSound);
+
             if (Health <= 0)
             {
                 isDeath = true;
                 Animator.SetBool("isDeath", true);
-                Camera.main.GetComponent<AudioSource>().PlayOneShot(DeathSound);
+                AudioManager.Instance.GruntDeath(deathSound, this.transform.position);
+                //Camera.main.GetComponent<AudioSource>().PlayOneShot(DeathSound);
 
 
 
