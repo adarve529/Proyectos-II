@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
+
 
 public class JohnMovement : MonoBehaviour
 {
@@ -17,10 +17,6 @@ public class JohnMovement : MonoBehaviour
     private int Health = 17;
     private bool isJumping = false;
 
-
-    [SerializeField] private EventReference shotSound;
-    [SerializeField] private EventReference hitSound;
-    [SerializeField] private EventReference jumpSound;
 
 
     // Start is called before the first frame update
@@ -71,7 +67,7 @@ public class JohnMovement : MonoBehaviour
         GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bullet.GetComponent<BulletScript>().SetDirection(direction);
 
-        AudioManager.Instance.PlayOneShot(shotSound, this.transform.position);
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Shot, this.transform.position);
     }
 
     private void Jump()
@@ -79,7 +75,7 @@ public class JohnMovement : MonoBehaviour
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
         isJumping = true;
         Animator.SetBool("jumping", true);
-        AudioManager.Instance.PlayJump(jumpSound, this.transform.position);
+        AudioManager.Instance.PlayJump(FMODEvents.Instance.Jump, this.transform.position);
 
     }
 
@@ -92,7 +88,7 @@ public class JohnMovement : MonoBehaviour
     public void Hit()
     {
         Health = Health - 1;
-        AudioManager.Instance.PlayOneHit(hitSound, this.transform.position);
+        AudioManager.Instance.PlayOneHit(FMODEvents.Instance.Hit, this.transform.position);
         if (Health == 0) { Destroy(gameObject); }
         
 
@@ -102,7 +98,7 @@ public class JohnMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "FallingCollider")
         {
-            GameManager.ChangeScene(4);
+            GameManager.ChangeScene(3);
         }
     }
 }

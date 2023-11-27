@@ -11396,7 +11396,8 @@ Transform:
   m_LocalPosition: {x: 0.07203165, y: -0.15027528, z: -2.3692625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1359925983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638238175
@@ -12121,27 +12122,6 @@ MonoBehaviour:
   BulletPrefab: {fileID: 5607528382590543133, guid: b8e3af4ebfa2997428251fdf1e037daa, type: 3}
   DeathSound: {fileID: 8300000, guid: 385ab8a7fd1cfd94d8f548ab3f8befe1, type: 3}
   HitSound: {fileID: 8300000, guid: 3448a3d169fe6524a98f232f53e01aa1, type: 3}
-  shotSound:
-    Guid:
-      Data1: 1997595085
-      Data2: 1280605330
-      Data3: 1228739755
-      Data4: -907206249
-    Path: event:/Shot
-  deathSound:
-    Guid:
-      Data1: 676377210
-      Data2: 1161949083
-      Data3: 1077793703
-      Data4: -2103696873
-    Path: event:/gruntDeath
-  hitSound:
-    Guid:
-      Data1: 15563379
-      Data2: 1112693904
-      Data3: 1895240618
-      Data4: -1314069898
-    Path: event:/Hit
 --- !u!1001 &921910313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13372,6 +13352,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 384942118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1359925982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359925983}
+  - component: {fileID: 1359925984}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359925983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359925982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633945903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359925984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359925982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476bcca5f5cee49ab9821b86e138ee52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Shot>k__BackingField:
+    Guid:
+      Data1: 1997595085
+      Data2: 1280605330
+      Data3: 1228739755
+      Data4: -907206249
+    Path: event:/Shot
+  <Hit>k__BackingField:
+    Guid:
+      Data1: 15563379
+      Data2: 1112693904
+      Data3: 1895240618
+      Data4: -1314069898
+    Path: event:/Hit
+  <Jump>k__BackingField:
+    Guid:
+      Data1: 1218462509
+      Data2: 1176500202
+      Data3: -1880948072
+      Data4: 2120073930
+    Path: event:/JohnJump
+  <Death>k__BackingField:
+    Guid:
+      Data1: 676377210
+      Data2: 1161949083
+      Data3: 1077793703
+      Data4: -2103696873
+    Path: event:/GruntDeath
+  <Music>k__BackingField:
+    Guid:
+      Data1: -1985424049
+      Data2: 1266815942
+      Data3: 1663687302
+      Data4: 1285496047
+    Path: event:/Music/LevelMusic
 --- !u!4 &1366343373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115260494845283125, guid: 414b056d03b6d2d4786f29f636fdf3dd, type: 3}
@@ -15104,27 +15163,6 @@ MonoBehaviour:
   JumpForce: 150
   Speed: 1
   BulletPrefab: {fileID: 4168885216423882564, guid: b05c2bcee7014664cb8bb7c927c53c06, type: 3}
-  shotSound:
-    Guid:
-      Data1: 1997595085
-      Data2: 1280605330
-      Data3: 1228739755
-      Data4: -907206249
-    Path: event:/Shot
-  hitSound:
-    Guid:
-      Data1: 15563379
-      Data2: 1112693904
-      Data3: 1895240618
-      Data4: -1314069898
-    Path: event:/Hit
-  jumpSound:
-    Guid:
-      Data1: 1218462509
-      Data2: 1176500202
-      Data3: -1880948072
-      Data4: 2120073930
-    Path: event:/JohnJump
 --- !u!95 &2070235536
 Animator:
   serializedVersion: 5

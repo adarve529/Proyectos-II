@@ -8,11 +8,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-    public int currentLevel = 1;
 
-
-    //Variable for the audio
-    public AudioMixer mixer;
 
     private void Awake()
     {
@@ -50,9 +46,4 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
     
-    //Set the volume level
-    public void SetLevel(float sliderValue)
-    {
-        mixer.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
-    }
 }
