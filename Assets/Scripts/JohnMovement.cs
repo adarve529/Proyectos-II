@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class JohnMovement : MonoBehaviour
@@ -8,13 +9,15 @@ public class JohnMovement : MonoBehaviour
     public float JumpForce;
     public float Speed;
     public GameObject BulletPrefab;
+    public float Health;
+    public float maxHealth;
+    public Image healthImg;
 
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     private float Horizontal;
     private bool Grounded;
     private float lastShoot;
-    private int Health = 17;
     private bool isJumping = false;
 
 
@@ -24,12 +27,16 @@ public class JohnMovement : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        Health = maxHealth;
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthImg.fillAmount = Health / maxHealth;
+
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
@@ -89,7 +96,10 @@ public class JohnMovement : MonoBehaviour
     {
         Health = Health - 1;
         AudioManager.Instance.PlayOneHit(FMODEvents.Instance.Hit, this.transform.position);
-        if (Health == 0) { Destroy(gameObject); }
+        if (Health == 0) { 
+            Destroy(gameObject);
+            GameManager.ChangeScene(5);
+        }
         
 
     }
