@@ -98,7 +98,7 @@ public class JohnMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "FallingCollider")
         {
-            GameManager.ChangeScene(3);
+            GameManager.ChangeScene(5);
         }
     }
 }
