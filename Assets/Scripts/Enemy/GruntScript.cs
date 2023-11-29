@@ -9,11 +9,13 @@ public class GruntScript : MonoBehaviour
     public GameObject BulletPrefab;
     public AudioClip DeathSound;
     public AudioClip HitSound;
+    public float speed;
+    public float Health;
 
     private float lastShoot;
     private Animator Animator;  
-    private int Health = 3;
     private bool isDeath = false;
+    private Rigidbody2D rb;
 
 
 
@@ -21,6 +23,7 @@ public class GruntScript : MonoBehaviour
     void Start()
     {
         Animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -29,17 +32,38 @@ public class GruntScript : MonoBehaviour
 
         if (John == null) return;
 
-        Vector3 direction = John.transform.position - transform.position;
-        if (direction.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-
-        float distance = Mathf.Abs(John.transform.position.x - transform.position.x);
-
-        if(distance < 1.0f && Time.time  > lastShoot + 0.5f)
+        if(Health > 0)
         {
-            Shoot();
-            lastShoot = Time.time;
+            Vector3 direction = John.transform.position - transform.position;
+            if (direction.x >= 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+
+            float distance = Mathf.Abs(John.transform.position.x - transform.position.x);
+
+            if (distance < 1.0f)
+            {
+                MoveTowardsPlayer();
+                //if (!Animator.GetBool("running")) Animator.SetBool("running", true);
+
+
+                if (Time.time > lastShoot + 0.5f)
+                {
+                    Shoot();
+                    lastShoot = Time.time;
+                }
+            }
+            else
+            {
+                // Si está fuera del rango, establecer el estado a idle
+               // if (Animator.GetBool("running")) Animator.SetBool("running", false);         
+            }
         }
+
+    }
+    private void MoveTowardsPlayer()
+    {
+        Vector2 targetPosition = new Vector2(John.transform.position.x, transform.position.y);
+        rb.MovePosition(Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime));
     }
 
     private void Shoot()

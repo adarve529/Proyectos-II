@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class JohnMovement : MonoBehaviour
@@ -12,6 +13,9 @@ public class JohnMovement : MonoBehaviour
     public float Health;
     public float maxHealth;
     public Image healthImg;
+    public float maxAmmo;
+    public float ammo;
+    //public Text textMesh;
 
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
@@ -19,8 +23,7 @@ public class JohnMovement : MonoBehaviour
     private bool Grounded;
     private float lastShoot;
     private bool isJumping = false;
-
-
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,8 @@ public class JohnMovement : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         Health = maxHealth;
-
+        ammo = maxAmmo;
+       // textMesh.text = ammo.ToString();
         
     }
 
@@ -67,14 +71,21 @@ public class JohnMovement : MonoBehaviour
 
     private void Shoot()
     {
-        Vector3 direction;
-        if(transform.localScale.x == 1.0f) direction = Vector3.right;
-        else direction = Vector3.left;
-    
-        GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
-        bullet.GetComponent<BulletScript>().SetDirection(direction);
+        if (ammo > 0)
+        {
+            Vector3 direction;
+            if (transform.localScale.x == 1.0f) direction = Vector3.right;
+            else direction = Vector3.left;
 
-        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Shot, this.transform.position);
+            GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+            bullet.GetComponent<BulletScript>().SetDirection(direction);
+            ammo -= 1;
+          //  textMesh.text = ammo.ToString();
+
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Shot, this.transform.position);
+        }
+        else Debug.Log("no hay municion");
+        
     }
 
     private void Jump()
