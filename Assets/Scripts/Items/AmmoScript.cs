@@ -12,6 +12,7 @@ public class AmmoScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<JohnMovement>().ammo += ammoToGive;
+            AudioManager.Instance.Reload(FMODEvents.Instance.Reload, this.transform.position);
             Destroy(gameObject);
         }
     }

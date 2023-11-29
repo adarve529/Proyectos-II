@@ -15416,6 +15416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1ba1dc9dd054e348d10ab088d78ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!4 &633945903
 Transform:
   m_ObjectHideFlags: 0
@@ -18694,28 +18696,28 @@ MonoBehaviour:
       Data2: 1280605330
       Data3: 1228739755
       Data4: -907206249
-    Path: event:/Shot
+    Path: event:/SFX/Shot
   <Hit>k__BackingField:
     Guid:
       Data1: 15563379
       Data2: 1112693904
       Data3: 1895240618
       Data4: -1314069898
-    Path: event:/Hit
+    Path: event:/SFX/Hit
   <Jump>k__BackingField:
     Guid:
       Data1: 1218462509
       Data2: 1176500202
       Data3: -1880948072
       Data4: 2120073930
-    Path: event:/JohnJump
+    Path: event:/SFX/JohnJump
   <Death>k__BackingField:
     Guid:
       Data1: 676377210
       Data2: 1161949083
       Data3: 1077793703
       Data4: -2103696873
-    Path: event:/GruntDeath
+    Path: event:/SFX/GruntDeath
   <Music>k__BackingField:
     Guid:
       Data1: -1985424049
@@ -18723,6 +18725,20 @@ MonoBehaviour:
       Data3: 1663687302
       Data4: 1285496047
     Path: event:/Music/LevelMusic
+  <Reload>k__BackingField:
+    Guid:
+      Data1: -25004382
+      Data2: 1241708340
+      Data3: -1594686551
+      Data4: 970469318
+    Path: event:/SFX/Reload
+  <Danger>k__BackingField:
+    Guid:
+      Data1: -751891375
+      Data2: 1147491160
+      Data3: 294562231
+      Data4: 1373761412
+    Path: event:/SFX/Danger
 --- !u!4 &1366343373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115260494845283125, guid: 414b056d03b6d2d4786f29f636fdf3dd, type: 3}

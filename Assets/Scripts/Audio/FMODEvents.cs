@@ -21,6 +21,12 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Music")]
     [field: SerializeField] public EventReference Music { get; private set; }
 
+    [field: Header("Reload")]
+    [field: SerializeField] public EventReference Reload { get; private set; }
+
+    [field: Header("Danger")]
+    [field: SerializeField] public EventReference Danger { get; private set; }
+
 
     public static FMODEvents Instance;
 

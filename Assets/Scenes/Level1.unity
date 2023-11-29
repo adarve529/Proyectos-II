@@ -12122,6 +12122,8 @@ MonoBehaviour:
   BulletPrefab: {fileID: 5607528382590543133, guid: b8e3af4ebfa2997428251fdf1e037daa, type: 3}
   DeathSound: {fileID: 8300000, guid: 385ab8a7fd1cfd94d8f548ab3f8befe1, type: 3}
   HitSound: {fileID: 8300000, guid: 3448a3d169fe6524a98f232f53e01aa1, type: 3}
+  speed: 0
+  Health: 0
 --- !u!1001 &921910313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13402,28 +13404,28 @@ MonoBehaviour:
       Data2: 1280605330
       Data3: 1228739755
       Data4: -907206249
-    Path: event:/Shot
+    Path: event:/SFX/Shot
   <Hit>k__BackingField:
     Guid:
       Data1: 15563379
       Data2: 1112693904
       Data3: 1895240618
       Data4: -1314069898
-    Path: event:/Hit
+    Path: event:/SFX/Hit
   <Jump>k__BackingField:
     Guid:
       Data1: 1218462509
       Data2: 1176500202
       Data3: -1880948072
       Data4: 2120073930
-    Path: event:/JohnJump
+    Path: event:/SFX/JohnJump
   <Death>k__BackingField:
     Guid:
       Data1: 676377210
       Data2: 1161949083
       Data3: 1077793703
       Data4: -2103696873
-    Path: event:/GruntDeath
+    Path: event:/SFX/GruntDeath
   <Music>k__BackingField:
     Guid:
       Data1: -1985424049
@@ -13431,6 +13433,20 @@ MonoBehaviour:
       Data3: 1663687302
       Data4: 1285496047
     Path: event:/Music/LevelMusic
+  <Reload>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Danger>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &1366343373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115260494845283125, guid: 414b056d03b6d2d4786f29f636fdf3dd, type: 3}
@@ -15163,6 +15179,11 @@ MonoBehaviour:
   JumpForce: 150
   Speed: 1
   BulletPrefab: {fileID: 4168885216423882564, guid: b05c2bcee7014664cb8bb7c927c53c06, type: 3}
+  Health: 0
+  maxHealth: 0
+  healthImg: {fileID: 0}
+  maxAmmo: 0
+  ammo: 0
 --- !u!95 &2070235536
 Animator:
   serializedVersion: 5
