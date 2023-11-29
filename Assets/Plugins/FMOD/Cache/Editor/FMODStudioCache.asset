@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 1022131795530827916}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -137,7 +137,7 @@ MonoBehaviour:
   - {fileID: 8086790507304649856}
   StringsBanks:
   - {fileID: 5576000153191412976}
-  cacheTime: 638367151193027331
+  cacheTime: 638367160570646718
   cacheVersion: 131609
 --- !u!114 &1022131795530827916
 MonoBehaviour:
@@ -154,10 +154,10 @@ MonoBehaviour:
   Path: ../Desktop/ProyectosII/Build/Desktop/Main.bank
   Name: Main
   StudioPath: bank:/Main
-  lastModified: 638367151193027331
+  lastModified: 638367160570646718
   FileSizes:
   - Name: Desktop
-    Value: 1911680
+    Value: 1911808
   Exists: 1
 --- !u!114 &1106954346580342485
 MonoBehaviour:
