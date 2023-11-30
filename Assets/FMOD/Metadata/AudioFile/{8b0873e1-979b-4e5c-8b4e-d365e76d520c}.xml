@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8b0873e1-979b-4e5c-8b4e-d365e76d520c}">
+		<property name="assetPath">
+			<value>snd_missil.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2654875283446712</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1ff7bba-3882-4b49-8115-93d975c485b2}</destination>
+		</relationship>
+	</object>
+</objects>

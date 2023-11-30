@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3ff3a8b0-0640-4d9b-9c78-f0aae4f258cc}">
+		<property name="assetPath">
+			<value>snd_landing.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.22349206349206349</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1ff7bba-3882-4b49-8115-93d975c485b2}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -652,18 +652,18 @@ MonoBehaviour:
     Path: event:/Music/LevelMusic
   <Reload>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -25004382
+      Data2: 1241708340
+      Data3: -1594686551
+      Data4: 970469318
+    Path: event:/SFX/Reload
   <Danger>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -751891375
+      Data2: 1147491160
+      Data3: 294562231
+      Data4: 1373761412
+    Path: event:/SFX/Danger
 --- !u!1 &937275345
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 937275348}
   - component: {fileID: 937275347}
-  - component: {fileID: 937275346}
+  - component: {fileID: 937275349}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -682,14 +682,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &937275346
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937275345}
-  m_Enabled: 1
 --- !u!20 &937275347
 Camera:
   m_ObjectHideFlags: 0
@@ -756,6 +748,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &937275349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937275345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &942668174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1ba1dc9dd054e348d10ab088d78ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!4 &2096027214
 Transform:
   m_ObjectHideFlags: 0

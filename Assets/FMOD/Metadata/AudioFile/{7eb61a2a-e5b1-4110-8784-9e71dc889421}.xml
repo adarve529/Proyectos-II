@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7eb61a2a-e5b1-4110-8784-9e71dc889421}">
+		<property name="assetPath">
+			<value>snd_explosion_ground.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0100680272108844</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1ff7bba-3882-4b49-8115-93d975c485b2}</destination>
+		</relationship>
+	</object>
+</objects>

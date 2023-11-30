@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5e9de98d-6df9-4e9e-b008-a054a68fc4f1}">
+		<property name="assetPath">
+			<value>snd_boss_fire.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.3511337868480724</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a1ff7bba-3882-4b49-8115-93d975c485b2}</destination>
+		</relationship>
+	</object>
+</objects>
