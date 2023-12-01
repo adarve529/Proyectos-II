@@ -15,7 +15,7 @@ public class JohnMovement : MonoBehaviour
     public Image healthImg;
     public float maxAmmo;
     public float ammo;
-    //public Text textMesh;
+    public Text textMesh;
 
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
