@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3965783509243102109}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.336, y: 0.245, z: -0.013440944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -100,7 +100,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c15ce7c42f63bd24db944939a9e4c72f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.016857164
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -185,7 +185,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   John: {fileID: 0}
   BulletPrefab: {fileID: 5607528382590543133, guid: b8e3af4ebfa2997428251fdf1e037daa, type: 3}
-  DeathSound: {fileID: 8300000, guid: 385ab8a7fd1cfd94d8f548ab3f8befe1, type: 3}
-  HitSound: {fileID: 8300000, guid: 3448a3d169fe6524a98f232f53e01aa1, type: 3}
   speed: 1.5
   Health: 4

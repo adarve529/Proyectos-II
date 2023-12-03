@@ -8,6 +8,8 @@ public class EnemyManagerScript : MonoBehaviour
     [SerializeField] private float timeEnemies;
     private float timeNextEnemy;
 
+    public GameObject john;
+
     // Update is called once per frame
     void Update()
     {
@@ -42,7 +44,22 @@ public class EnemyManagerScript : MonoBehaviour
         }
 
         int randomEnemyIndex = Random.Range(0, enemies.Length);
-        Instantiate(enemies[randomEnemyIndex], position, Quaternion.identity);
+        GameObject newEnemy = Instantiate(enemies[randomEnemyIndex], position, Quaternion.identity);
+
+        // Verifica si el objeto John está configurado
+        if (john != null)
+        {
+            // Asigna el objeto John al componente EnemyScript (o al componente correspondiente) del nuevo enemigo
+            GruntScript grunt = newEnemy.GetComponent<GruntScript>(); // Ajusta EnemyScript al nombre real del script del enemigo
+            if (grunt != null)
+            {
+                grunt.John = john;
+            }
+            else
+            {
+                Debug.LogWarning("El componente EnemyScript no fue encontrado en el nuevo enemigo.");
+            }
+        }
     }
 }
 

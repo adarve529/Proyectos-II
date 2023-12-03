@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7165864825714458443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bomb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bomb
+  Guid:
+    Data1: 824522478
+    Data2: 1087275996
+    Data3: -1290930241
+    Data4: -986415705
+  Banks:
+  - {fileID: -4864518194779547350}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6787174580718780233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +96,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638369518760741218
+  lastModified: 638372316937080131
   FileSizes:
   - Name: Desktop
-    Value: 56960
+    Value: 83872
   Exists: 1
 --- !u!114 &-2421667918896982889
 MonoBehaviour:
@@ -143,11 +170,38 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638369518760669989
+  lastModified: 638372316936745473
   FileSizes:
   - Name: Desktop
     Value: 1912640
   Exists: 1
+--- !u!114 &-245454479430821278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Healing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Healing
+  Guid:
+    Data1: -302625658
+    Data2: 1150761219
+    Data3: 182358974
+    Data4: -917952143
+  Banks:
+  - {fileID: -4864518194779547350}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,12 +228,14 @@ MonoBehaviour:
   - {fileID: 5098888279450591357}
   - {fileID: 5911458143382676456}
   - {fileID: 8062069024274065215}
+  - {fileID: -7165864825714458443}
+  - {fileID: -245454479430821278}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1623360571014274927}
   StringsBanks:
   - {fileID: 5704649230120539501}
-  cacheTime: 638369518760741218
+  cacheTime: 638372316937080131
   cacheVersion: 131609
 --- !u!114 &3017637977370603151
 MonoBehaviour:
@@ -250,10 +306,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638369518760701928
+  lastModified: 638372316936758995
   FileSizes:
   - Name: Desktop
-    Value: 1218
+    Value: 1302
   Exists: 1
 --- !u!114 &5775540596274365022
 MonoBehaviour:
@@ -270,7 +326,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Main.bank
   Name: Main
   StudioPath: bank:/Main
-  lastModified: 638369518760544588
+  lastModified: 638369514124680931
   FileSizes:
   - Name: Desktop
     Value: 1911808

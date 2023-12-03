@@ -27,6 +27,12 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Danger")]
     [field: SerializeField] public EventReference Danger { get; private set; }
 
+    [field: Header("Bomb")]
+    [field: SerializeField] public EventReference Bomb { get; private set; }
+
+    [field: Header("Health")]
+    [field: SerializeField] public EventReference Health { get; private set; }
+
 
     public static FMODEvents Instance;
 

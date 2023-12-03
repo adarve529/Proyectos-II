@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8623443206253786236}
   - component: {fileID: 8717465120648695386}
   - component: {fileID: -3205295640463655256}
-  m_Layer: 0
+  - component: {fileID: 1748647788498520884}
+  - component: {fileID: 9110236379970930902}
+  m_Layer: 7
   m_Name: red_barrel
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2246090156253707317}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1928127, y: -0.6463318, z: 3.3193657}
   m_LocalScale: {x: 1.3493357, y: 1.3493357, z: 1.3493357}
   m_ConstrainProportionsScale: 0
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b7f18790161abe046b67a7e33887a0dd, type: 3}
+  m_Sprite: {fileID: 1905388561, guid: b7f18790161abe046b67a7e33887a0dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,3 +160,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1748647788498520884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246090156253707317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1167f76c2e3a41e68d267237b05d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: 0.4
+  fuerzaExplosion: 500
+--- !u!95 &9110236379970930902
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246090156253707317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 75b405714f2eb4c67998ac50fcdc140a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

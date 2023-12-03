@@ -7,8 +7,7 @@ public class GruntScript : MonoBehaviour
 {
     public GameObject John;
     public GameObject BulletPrefab;
-    public AudioClip DeathSound;
-    public AudioClip HitSound;
+    
     public float speed;
     public float Health;
 
@@ -54,7 +53,7 @@ public class GruntScript : MonoBehaviour
             }
             else
             {
-                // Si está fuera del rango, establecer el estado a idle
+                // Si estï¿½ fuera del rango, establecer el estado a idle
                // if (Animator.GetBool("running")) Animator.SetBool("running", false);         
             }
         }

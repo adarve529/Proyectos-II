@@ -76,6 +76,16 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound, vector3);
     }
 
+    public void BombExploding(EventReference sound, Vector3 vector3)
+    {
+        RuntimeManager.PlayOneShot(sound, vector3);
+    }
+
+    public void Healing(EventReference sound, Vector3 vector3)
+    {
+        RuntimeManager.PlayOneShot(sound, vector3);
+    }
+
 
     private void Start()
     {
