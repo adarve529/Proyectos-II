@@ -1532,10 +1532,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grunt (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5771581695532505640, guid: a560cf7dcd1a7d24d8ef0e4998397b6b, type: 3}
-      propertyPath: m_Mass
-      value: 0.016857164
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -97445,7 +97441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5771581695532505640, guid: a560cf7dcd1a7d24d8ef0e4998397b6b, type: 3}
       propertyPath: m_Mass
-      value: 0.016857164
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771581695532505640, guid: a560cf7dcd1a7d24d8ef0e4998397b6b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,7 +9,7 @@ public class NextLevelPortal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GameManager.ChangeScene(6);
+            GameManager.ChangeScene(2);
         }
     }
 
