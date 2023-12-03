@@ -16,10 +16,26 @@ public class VolumeSlider : MonoBehaviour
 
     private Slider slider;
 
-    private void Awake()
+    private void Start()
     {
         slider = this.GetComponentInChildren<Slider>();
+
+        switch (volumeType)
+        {
+            case VolumeType.MUSIC:
+                slider.value = AudioManager.Instance.musicVolume;
+                break;
+            case VolumeType.SFX:
+                slider.value = AudioManager.Instance.sfxVolume;
+                break;
+            default:
+                Debug.LogWarning("Volume type not supported: " + volumeType);
+                break;
+        }
     }
+
+
+
 
     private void Update()
     {

@@ -11,10 +11,10 @@ public class AudioManager : MonoBehaviour
     [Header("Volume")]
     [Range(0, 1)]
 
-    public float musicVolume = 1;
+    public float musicVolume = 0.5f;
     [Range(0, 1)]
 
-    public float sfxVolume = 1;
+    public float sfxVolume = 0.5f;
     [Range(0, 1)]
 
     public Bus musicBus;
@@ -23,9 +23,6 @@ public class AudioManager : MonoBehaviour
 
 
     private EventInstance musicEventInstance;
-
-    private List<EventInstance> eventInstances;
-    private List<StudioEventEmitter> studioEventEmitters;
 
     public static AudioManager Instance;
 

@@ -23286,18 +23286,18 @@ MonoBehaviour:
     Path: event:/SFX/Danger
   <Bomb>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 824522478
+      Data2: 1087275996
+      Data3: -1290930241
+      Data4: -986415705
+    Path: event:/SFX/Bomb
   <Health>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -302625658
+      Data2: 1150761219
+      Data3: 182358974
+      Data4: -917952143
+    Path: event:/SFX/Healing
 --- !u!4 &1366343373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115260494845283125, guid: 414b056d03b6d2d4786f29f636fdf3dd, type: 3}
